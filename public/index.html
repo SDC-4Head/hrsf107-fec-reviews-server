@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>errbnb</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>errbnb</h1>
+    <div id="reviews"></div>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="http://localhost:3124/rooms/:roomid/bundle.js"></script>
+    <script>
+
+      document.addEventListener('load', () => {
+        ReactDOM.render(
+          React.createElement(App), 
+          document.getElementById("reviews")
+        );
+      });
+    </script>
+  </body>
+
+</html>
