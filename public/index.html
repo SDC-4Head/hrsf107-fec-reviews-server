@@ -8,16 +8,37 @@
   </head>
   <body>
     <h1>errbnb</h1>
+
+    <div id="gallery"></div>
     <div id="reviews"></div>
+    <div id="booking"></div>
+    <div id="recommendations"></div>
+
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
-    <script src="http://localhost:3124/rooms/:roomid/bundle.js"></script>
+
+    <script src="http://localhost:3124/rooms/:roomid/reviews.js"></script>
+    <script src="http://localhost:1337/rooms/:roomid/bundle.js"></script>
+    <script src="http://localhost:8080/bundle.js"></script>
+    <script src="http://localhost:3123/rooms/:roomid/bundle.js"></script>
     <script>
 
       document.addEventListener('load', () => {
         ReactDOM.render(
-          React.createElement(App), 
+          React.createElement(Reviews), 
           document.getElementById("reviews")
+        );
+        ReactDOM.render(
+          React.createElement(Gallery), 
+          document.getElementById("gallery")
+        );
+        ReactDOM.render(
+          React.createElement(Booking), 
+          document.getElementById("booking")
+        );
+        ReactDOM.render(
+          React.createElement(Recommendations), 
+          document.getElementById("recommendations")
         );
       });
     </script>
