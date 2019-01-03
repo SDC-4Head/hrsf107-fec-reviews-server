@@ -14,7 +14,8 @@ h1 {
   top: 25px;
   right: 50px;
   font-family: 'Montserrat', sans-serif;
-  max-width: 30%;
+  max-width: 25%;
+  min-width: 25%;
   margin-right: 75px;
 }
 
