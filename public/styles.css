@@ -1,0 +1,25 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#description {
+  display: inline-block;
+}
+
+#booking {
+  margin: 25px 0px 0px 50px;
+  float: right;
+  display: inline-block;
+  position: sticky;
+  top: 25px;
+  right: 50px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 30%;
+  margin-right: 75px;
+}
+
+#reviews {
+  float: left;
+  display: inline-block;
+  margin-left: 75px;
+}
