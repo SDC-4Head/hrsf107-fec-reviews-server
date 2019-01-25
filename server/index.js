@@ -9,8 +9,8 @@ const port = process.env.PORT || 3000;
 app.use(morgan('dev'));
 
 // Reviews - James
-app.use('/api/reviews/rooms/:roomid', proxy({target: 'http://54.153.117.225'}));
-app.use('/api/ratings/rooms/:roomid', proxy({target: 'http://54.153.117.225'}));
+app.use('/api/reviews/rooms/:roomid', proxy({target: 'http://54.183.178.35:3124'}));
+app.use('/api/ratings/rooms/:roomid', proxy({target: 'http://54.183.178.35:3124'}));
 
 // Image Gallery - Josh
 app.use('/rooms/:id/photos', proxy({target: 'http://localhost:1337'}));
@@ -22,6 +22,10 @@ app.use('/api/rooms/:id', proxy({target: 'http://localhost:8080'}));
 app.use('/house', proxy({target: 'http://localhost:3123'}));
 
 app.use('/rooms/:roomid', express.static("./public"));
+
+app.get('/loaderio-cede38c6d273ec58a64293c11798e730', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/dist', 'loaderio-cede38c6d273ec58a64293c11798e730.txt'))
+})
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
