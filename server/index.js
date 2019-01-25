@@ -9,8 +9,8 @@ const port = process.env.PORT || 3000;
 app.use(morgan('dev'));
 
 // Reviews - James
-app.use('/api/reviews/rooms/:roomid', proxy({target: 'http://localhost:3124'}));
-app.use('/api/ratings/rooms/:roomid', proxy({target: 'http://localhost:3124'}));
+app.use('/api/reviews/rooms/:roomid', proxy({target: 'http://54.153.117.225'}));
+app.use('/api/ratings/rooms/:roomid', proxy({target: 'http://54.153.117.225'}));
 
 // Image Gallery - Josh
 app.use('/rooms/:id/photos', proxy({target: 'http://localhost:1337'}));
