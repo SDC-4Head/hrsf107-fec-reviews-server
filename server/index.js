@@ -25,7 +25,7 @@ app.use('/house', proxy({target: 'http://localhost:3123'}));
 app.use('/rooms/:roomid', express.static("./public"));
 
 app.get('/loaderio-b94e7f2ffd7aa9aa6820957ffba5aa68', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/dist', 'loaderio-b94e7f2ffd7aa9aa6820957ffba5aa68.txt'))
+  res.sendFile(path.join(__dirname, '../public', 'loaderio-b94e7f2ffd7aa9aa6820957ffba5aa68.txt'))
 })
 
 app.listen(port, () => {
